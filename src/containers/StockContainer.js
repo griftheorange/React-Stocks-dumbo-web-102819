@@ -4,10 +4,8 @@ import Stock from '../components/Stock'
 class StockContainer extends Component {
 
   genStocks = () => {
-    return this.props.stocks.filter((stock) => {
-      return !stock.purchased
-    }).map((stock, i) => {
-      return <Stock key={i} stock={stock} togglePurchased={this.props.togglePurchased}/>
+    return this.props.stocks.map((stock, i) => {
+      return <Stock key={i} stock={stock} togglePurchased={stock.purchased ? ()=>{} : this.props.togglePurchased}/>
     })
   }
 

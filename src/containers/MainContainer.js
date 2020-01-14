@@ -8,7 +8,7 @@ class MainContainer extends Component {
   state = {
     stocks: [],
     sortedBy: null,
-    filteredBy: null
+    filteredBy: "placeholder"
   }
 
   changeSorting = (changeTo) => {
@@ -55,7 +55,7 @@ class MainContainer extends Component {
   }
 
   getFilteredStocks = () => {
-    if(this.state.filteredBy){
+    if(this.state.filteredBy != "placeholder"){
       return this.state.stocks.filter((stock) => {
         return stock.type == this.state.filteredBy
       })

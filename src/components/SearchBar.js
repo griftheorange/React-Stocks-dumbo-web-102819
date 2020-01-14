@@ -27,7 +27,7 @@ const SearchBar = (props) => {
       <label>
         <strong>Filter:</strong>
         <select defaultValue="placeholder" onChange={handleFilterUpdate}>
-          <option disabled value="placeholder">Please Select</option>
+          <option value="placeholder">Please Select</option>
           <option value="Tech">Tech</option>
           <option value="Sportswear">Sportswear</option>
           <option value="Finance">Finance</option>
